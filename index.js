@@ -45,3 +45,4 @@ studentsFolderName.forEach(studentFolderName => {
         console.log(`Folder "${studentFolderName}" nie posiada wymaganych plikow\n`);
     }
 });
+console.log('test');
