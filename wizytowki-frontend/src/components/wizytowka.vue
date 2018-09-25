@@ -92,8 +92,8 @@
     color: white;
     font-size: 15px;
     grid-column: 1/7;
-    height: 50px;
-    max-height: 120px;
+    height: auto;
+    max-height: 150px;
   }
 
   .show-btn {
