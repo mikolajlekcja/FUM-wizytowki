@@ -15,7 +15,7 @@ studentsFolderName.forEach(studentFolderName => {
     const studentFolderContentsName = fs.readdirSync(`./students/${studentFolderName}`);
     //Nazwy plikow z tablicy sa laczone jako string
     const inlineFileNames = studentFolderContentsName.join(" ");
-    
+
     //Lomygy ale dlugie, pewnie da sie krocej (chyba), ale nie wiem jak ;c
     //Sprawdzanie czy folder posiada wymagajace pliki (html, json i logo)
     if(inlineFileNames.search("index.html") > -1 && inlineFileNames.search("config.json") > -1 && inlineFileNames.search("logo.png") > -1) {
@@ -27,8 +27,8 @@ studentsFolderName.forEach(studentFolderName => {
             studentPage.author = author;
             studentPage.description = description;
             studentPage.color = color;
-            studentPage.htmlLink = "" + `./${studentFolderName}/index.html`;
-            studentPage.logoLink = "" + `./${studentFolderName}/logo.png`;
+            studentPage.htmlLink = "" + `${studentFolderName}/index.html`;
+            studentPage.logoLink = "" + `${studentFolderName}/logo.png`;
 
             //Pushowanie studentPage do tablicy studentsPage
             studentsPage.push(studentPage);
@@ -45,4 +45,5 @@ studentsFolderName.forEach(studentFolderName => {
         console.log(`Folder "${studentFolderName}" nie posiada wymaganych plikow\n`);
     }
 });
-console.log('test');
+
+module.exports.students = studentsPage;
